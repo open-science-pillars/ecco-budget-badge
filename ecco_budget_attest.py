@@ -8,7 +8,7 @@ computation and met the recorded tolerances, then emit the verdict and an
 optional shields.io badge endpoint JSON.
 
 The portable half of the OKF v0.2 Attested Computation contract
-(okf-v02-kit Session 3): the executor produces a receipt; this attester
+: the executor produces a receipt; this attester
 checks it. Deterministic, no network, no LLM.
 
 Receipt JSON (produced by the executor):

@@ -13,7 +13,7 @@ hand-set: only the attester writes it.**
 
 The source of truth is the Attested Computation concept in the
 canonical knowledge bundle:
-[`podaac/computations/ecco-heat-budget.md`](https://github.com/open-science-pillars/nasa-daac-knowledge/blob/main/podaac/computations/ecco-heat-budget.md).
+[`knowledge/podaac/computations/ecco-heat-budget.md`](https://github.com/open-science-pillars/nasa-daac-knowledge/blob/main/knowledge/podaac/computations/ecco-heat-budget.md).
 This repo carries a verbatim copy of the sanctioned computation
 (`computations/ecco_heat_budget.py`) at a recorded bundle commit, with
 its sha256 in [`computations/MANIFEST`](computations/MANIFEST). The

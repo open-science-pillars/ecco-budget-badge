@@ -1,6 +1,7 @@
 # Adopter snippet: attach the "closes the budget" badge to a repo.
 # Requires: your notebook or script writes receipt.json (the executor
-# contract from the ECCO heat budget Attested Computation concept).
+# contract from the ECCO heat budget Attested Computation concept),
+# from a data tree the verify tool has stamped with RECORD.json.
 name: ecco-budget-attestation
 on: [push, workflow_dispatch]
 jobs:
@@ -10,14 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch sanctioned computation and attester (pinned)
         run: |
-          git clone --depth 1 --branch v1 https://github.com/open-science-pillars/ecco-budget-badge tooling
+          git clone --depth 1 --branch v2 https://github.com/open-science-pillars/ecco-budget-badge tooling
       - name: Run budget and produce receipt
         run: python run_budget.py --receipt receipt.json   # your executor
       - name: Attest
         run: |
-          python tooling/ecco_budget_attest.py receipt.json \
+          python tooling/ecco_budget_badge.py receipt.json \
             --computation tooling/computations/ecco_heat_budget.py \
-            --tol-max 1e-10 --tol-p999 1e-11 \
+            --attester tooling/attesters/budget_residual.py \
             --badge .badges/ecco-budget.json --label "ecco heat budget"
       - name: Publish badge JSON
         uses: EndBug/add-and-commit@v9

@@ -1,0 +1,16 @@
+# Sanctioned files, copied verbatim from the canonical knowledge bundle
+# (github.com/open-science-pillars/nasa-daac-knowledge). The concept, not
+# this repo, is the source of truth for the pass bar; the attester below
+# carries it, and this repo never restates it as a flag.
+bundle_commit: 24b27927c387
+copied: 2026-09-04
+files:
+  computations/ecco_heat_budget.py:
+    sha256: 00ffba3b13ba76d7bd8c0825d56876f5d620eb076c5539ba2a925a2f39a488df
+    source: knowledge/podaac/references/computations/ecco_heat_budget.py
+    concept: knowledge/podaac/computations/ecco-heat-budget.md
+  attesters/budget_residual.py:
+    sha256: e8f92a2a16041fe1b6e30d3bf3b03c4240047c8ad506d886f0b5e4bb567e2834
+    source: knowledge/podaac/references/attesters/budget_residual.py
+    concept: knowledge/podaac/computations/ecco-heat-budget.md
+    pass_bar_at_copy: residual_max 1e-10 degC/s, residual_p999 1e-11 degC/s, absolute, pointwise; receipt must name a verified data tree (data.record)

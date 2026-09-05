@@ -4,7 +4,7 @@
 # ///
 """Deterministic attester for the attested ECCO v4r4 heat budget.
 
-No LLM, stdlib only, consumer-side (spec 10.2: the attester is code that
+No LLM, stdlib only, consumer-side (OKF v0.2 §10.2: the attester is code that
 takes a receipt and returns a verdict). Reads a receipt JSON produced per
 references/skills/run-golden.md and returns PASS (exit 0) only when ALL
 of the following hold, otherwise FAIL (exit 1) naming the failing field:
@@ -13,7 +13,7 @@ of the following hold, otherwise FAIL (exit 1) naming the failing field:
      bound_parameters, residual_max, residual_p999, cells_evaluated);
   2. code_sha256 equals the sha256 of the sanctioned computation file
      (references/computations/ecco_heat_budget.py), so a rewritten or
-     swapped computation fails mechanically (spec 10.3);
+     swapped computation fails mechanically (OKF v0.2 §10.3);
   3. bound_parameters match the declared parameter set of the contract
      (year: integer, required; region: string, optional; nothing else);
   4. residual_max  <= 1e-10 degC/s and residual_p999 <= 1e-11 degC/s,

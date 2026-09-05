@@ -12,18 +12,19 @@
 
 EXTRACTED 2026-08-30 from the ocean-science golden notebook
 (verification/ocean_budget.py); the four-term formulation is exactly as
-skills/ecco/references/budget-formulation.md records it (tutorial-quoted,
+knowledge/podaac/conventions/ecco-budget-formulation.md records it (tutorial-quoted,
 verified line by line 2026-07-04). The numerics below are the golden's
 cells verbatim; this file adds only parameter binding (year, region),
 data-cache path resolution, and receipt emission.
 
-Contract: podaac/computations/ecco-heat-budget.md (type: Attested
+Contract: knowledge/podaac/computations/ecco-heat-budget.md (type: Attested
 Computation). Consumers bind values for the declared parameters and MUST
 NOT edit this file; the attester (references/attesters/budget_residual.py)
-hashes it, so any edit fails attestation by construction (spec 10.3).
+hashes it, so any edit fails attestation by construction (OKF v0.2 §10.3).
 
-Receipt (JSON to stdout, or --receipt PATH): run_id, code_sha256,
-bound_parameters, residual_max, residual_p999, cells_evaluated.
+Receipt (JSON to stdout, or --receipt PATH): run_id, code_sha256, data
+(the tree and its RECORD.json stamp), bound_parameters, residual_max,
+residual_p999, cells_evaluated.
 """
 
 import argparse

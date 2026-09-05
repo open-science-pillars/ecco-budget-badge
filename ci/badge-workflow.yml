@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch sanctioned computation and attester (pinned)
         run: |
-          git clone --depth 1 --branch v2 https://github.com/open-science-pillars/ecco-budget-badge tooling
+          git clone --depth 1 --branch v3 https://github.com/open-science-pillars/ecco-budget-badge tooling
       - name: Run budget and produce receipt
         run: python run_budget.py --receipt receipt.json   # your executor
       - name: Attest

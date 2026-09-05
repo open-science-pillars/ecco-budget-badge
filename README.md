@@ -60,7 +60,7 @@ cannot be found.
    against a data tree the bundle's verify tool has stamped; it emits
    the receipt itself, so the hash and the tree bind automatically).
 2. Add the workflow from [`ci/badge-workflow.yml`](ci/badge-workflow.yml)
-   to your repo, pinning this repo **by tag** (`--branch v2`).
+   to your repo, pinning this repo **by tag** (`--branch v3`).
 3. Commit or publish the badge JSON (for example `.badges/ecco-budget.json`
    on your default branch or gh-pages) and put the badge line in your
    README:

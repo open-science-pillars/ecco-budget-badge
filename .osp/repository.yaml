@@ -1,0 +1,14 @@
+# Canonical classification of this repository (ADR A, docs/decisions in the
+# marketplace repository). GitHub topics, the sphere view and every runtime
+# manifest are rendered from this file, never the other way round.
+schema_version: 1
+repository:
+  name: ecco-budget-badge
+  kind: tooling
+  status: available
+  notes: 'Retirement decided 2026-09-12 (ADR A): archived once its workflow and badge writer move beside
+    the canonical attester'
+classification:
+  spheres: []
+  primary_sphere: null
+  discipline: null
